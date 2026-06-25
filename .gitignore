@@ -1,0 +1,54 @@
+# =============================================
+# my-openclaw: public-safe config backup
+# 严格排除所有含凭证、私人、运行时内容
+# =============================================
+
+# ---- 敏感配置 & 备份 ----
+openclaw.json
+openclaw.json.*
+openclaw.json.bak
+openclaw.json.bak.*
+openclaw.json.last-good
+gateway-supervisor-restart-handoff.json
+exec-approvals.json
+mcp-approvals.json
+update-check.json
+
+# ---- 凭证 / 设备 / 身份 ----
+credentials/
+identity/
+devices/
+
+# ---- 主人私人信息 ----
+workspace/USER.md
+workspace/PROMPT.md
+workspace/IDENTITY.md
+workspace/openclaw-workspace-state.json
+workspace/memory/
+
+# ---- 运行时 & 缓存 ----
+plugin-skills/
+.clawhub/
+.clawhub-meta/
+.clawhub-meta.json
+.clawhub.lock
+.clawhub-mcp.json
+.clawhub-state.json
+.clawhub-state-lock.json
+.clawhub-tmp/
+npm/
+agents/
+logs/
+state/
+tui/
+openclaw-weixin/
+workspace-attestations/
+
+# ---- 系统/临时 ----
+Thumbs.db
+.DS_Store
+desktop.ini
+*.tmp
+*.swp
+*.log
+*.pid
